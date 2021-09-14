@@ -1,0 +1,42 @@
+{
+  "name": "algolia-graphql-schema",
+  "version": "0.0.1",
+  "description": "Given an Algolia index, generates valid GraphQL types for exposing a GraphQL backend search Query",
+  "main": "index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlypoly/algolia-graphql-schema.git"
+  },
+  "keywords": [
+    "algolia",
+    "graphql",
+    "graphql",
+    "types",
+    "graphql",
+    "schema",
+    "algolia",
+    "schema"
+  ],
+  "author": "Charly POLY <hello@charlypoly.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charlypoly/algolia-graphql-schema/issues"
+  },
+  "homepage": "https://github.com/charlypoly/algolia-graphql-schema#readme",
+  "dependencies": {
+    "@wittydeveloper/json-schema-to-graphql": "^0.0.4",
+    "algoliasearch": "^4.10.5",
+    "quicktype-core": "^6.0.70"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@types/json-schema": "^7.0.9",
+    "@types/node": "^16.9.1"
+  }
+}

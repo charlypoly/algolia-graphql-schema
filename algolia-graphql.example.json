@@ -1,0 +1,12 @@
+{
+  "algoliaIndex": "products",
+  "algoliaAppId": "",
+  "algoliaAdminApiKey": "",
+  "algoliaSearchApiKey": "",
+  "outputDir": "typedefs/",
+  "outputFileName": "algolia",
+  "searchQueryName": "searchProducts",
+  "fallbackTypes": {
+    "collections[]": "string"
+  }
+}
