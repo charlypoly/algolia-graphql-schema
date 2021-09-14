@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "Given an Algolia index, generates valid GraphQL types for exposing a GraphQL backend search Query",
   "main": "index.js",
-  "bin": "dist/index.js",
+  "bin": "bin/algolia-graphql-schema",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
