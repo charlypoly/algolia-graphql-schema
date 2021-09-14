@@ -43,7 +43,30 @@ For an Algolia index with the following objects:
 ]
 ```
 
-the following GraphQL types are generated:
+by adding the following script to the `package.json`:
+
+```json
+// ...
+"scripts": {
+  "generate:graphql": "algolia-graphql-schema"
+},
+// ...
+```
+
+And running the script:
+
+```bash
+$ npm link
+$ npm run generate:graphql
+
+> algolia-graphql-demo-server@1.0.0 generate:graphql
+> algolia-graphql-schema
+
+Analyzing products index (that might take a few seconds...)
+products.graphql created!
+```
+
+the following `products.graphql` is generated:
 
 ```graphql
 type AlgoliaResultObject {
