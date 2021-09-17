@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/charlypoly/algolia-graphql-schema#readme",
   "dependencies": {
-    "@wittydeveloper/json-schema-to-graphql": "^0.0.4",
+    "@wittydeveloper/json-schema-to-graphql": "^0.0.5",
     "algoliasearch": "^4.10.5",
     "quicktype-core": "^6.0.70"
   },
