@@ -2,6 +2,12 @@
 
 Given an Algolia index, generates valid GraphQL types for exposing a GraphQL backend search Query
 
+## Install
+
+```bash
+npm install @wittydeveloper/algolia-graphql-schema
+```
+
 ## Configuration
 
 `algolia_graphql_config.json` example file:
