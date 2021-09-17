@@ -4,20 +4,22 @@ Given an Algolia index, generates valid GraphQL types for exposing a GraphQL bac
 
 ## Configuration
 
-`algolia_graphql_config.json`
+`algolia_graphql_config.json` example file:
 
 ```json
 {
   "algoliaIndex": "products",
   "algoliaAppId": "",
   "algoliaAdminApiKey": "",
-  "algoliaSearchApiKey": "",
-  "outputDir": "typedefs/",
-  "outputFileName": "algolia",
-  "searchQueryName": "search",
+  "outputDir": "typedefs/", // default: "."
+  "outputFileName": "algolia", // default: uses `algoliaIndex` property
+  "searchQueryName": "search_products", // default: "search"
+  // provide type mapping for unsupported GraphQL types (ex: scalar unions, objects)
   "fallbackTypes": {
     "collections[]": "string"
-  }
+  },
+  // array like values are nullable by default
+  "arraysNullable": false
 }
 ```
 
@@ -30,14 +32,16 @@ For an Algolia index with the following objects:
   {
     "id": "e2866573-7591-4742-b2bc-891b78d679bd",
     "title": "Handcrafted Concrete Pants",
-    "collections": ["Cotton"],
+    // empty arrays will resolves to null[] which is not supported by GQL
+    //  fortunately, we provide a fallback type for `collections[]`
+    "collections": [],
     "shipping": "Free shipping",
     "salePrice": 781
   },
   {
     "id": "a07d4dd8-7fc8-40b6-9879-cf6e0dd9efb7",
     "title": "Refined Soft Chicken",
-    "collections": ["Fresh"],
+    "collections": [],
     "salePrice": 657
   }
 ]
@@ -97,7 +101,7 @@ input SearchInput {
 
 type Query {
   # ...
-  search_flights($input: SearchInput!, $after: String): [SearchResults!]!
+  search_products($input: SearchInput!, $after: String): [SearchResults!]!
 }
 ```
 

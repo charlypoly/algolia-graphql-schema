@@ -11,15 +11,21 @@ import graphqlTypesFromJsonSchema from "./graphqlTypesFromJsonSchema";
 import { JSONSchema6 } from "json-schema";
 import { convert } from "@wittydeveloper/json-schema-to-graphql";
 
+type JSCToGqlOptions = Required<Parameters<typeof convert>>["1"];
+
 export interface Configuration {
+  // [required configuration]
   algoliaIndex: string;
   algoliaAppId: string;
   algoliaAdminApiKey: string;
-  algoliaSearchApiKey: string;
-  outputDir?: string;
-  outputFileName?: string;
-  searchQueryName?: string;
-  fallbackTypes: Required<Parameters<typeof convert>>["1"]["fallbackTypes"];
+  // [optional configuration properties]
+  outputDir?: string; // default: "."
+  outputFileName?: string; // default: uses `algoliaIndex` property
+  searchQueryName?: string; // default: "search"
+  // provide type mapping for unsupported GraphQL types (ex: scalar unions, objects)
+  fallbackTypes: JSCToGqlOptions["fallbackTypes"];
+  // array like values are nullable by default
+  arraysNullable: JSCToGqlOptions["arraysNullable"];
 }
 
 const emitError = (error: Error) =>
