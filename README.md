@@ -12,7 +12,7 @@ npm install -D algolia-graphql-schema
 
 `algolia_graphql_config.json` example file:
 
-```json
+```js
 {
   "algoliaIndex": "products",
   "algoliaAppId": "",
@@ -33,7 +33,7 @@ npm install -D algolia-graphql-schema
 
 For an Algolia index with the following objects:
 
-```json
+```js
 [
   {
     "id": "e2866573-7591-4742-b2bc-891b78d679bd",
