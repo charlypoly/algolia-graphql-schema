@@ -1,6 +1,6 @@
 {
   "name": "algolia-graphql-schema",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Given an Algolia index, generates valid GraphQL types for exposing a GraphQL backend search Query",
   "main": "src/index.js",
   "bin": "dist/index.js",
