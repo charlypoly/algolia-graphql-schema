@@ -5,7 +5,7 @@ Given an Algolia index, generates valid GraphQL types for exposing a GraphQL bac
 ## Install
 
 ```bash
-npm install @wittydeveloper/algolia-graphql-schema
+npm install -D algolia-graphql-schema
 ```
 
 ## Configuration
