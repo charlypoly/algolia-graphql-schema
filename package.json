@@ -33,7 +33,7 @@
   "dependencies": {
     "@wittydeveloper/json-schema-to-graphql": "^0.0.5",
     "algoliasearch": "^4.10.5",
-    "quicktype-core": "^6.0.70"
+    "quicktype-core": "^23.0.0"
   },
   "peerDependencies": {
     "lodash": "^4.17.10"
